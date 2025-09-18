@@ -4,11 +4,21 @@ saludar=function(){
     // recuperar el valor de la caja de texto txt apellido
     let apellido=recuperarTexto("txtapellido");
 
-
     let edad = recuperarInt("txtedad");
 
     let estatura = recuperarFloat("txtestatura");
+
+    let mensajeBienvenido ="Bienvenido "+nombre+" "+apellido
+
+    mostrarTexto("lblResultado",mensajeBienvenido);
     
+
+}
+
+mostrarTexto = function(idComponente, mensaje){
+    let componente;
+    componente=document.getElementById(idComponente);
+    componente.innerText = mensaje;
 
 }
 
