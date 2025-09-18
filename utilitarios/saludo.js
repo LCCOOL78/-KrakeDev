@@ -3,6 +3,11 @@ saludar=function(){
     let nombre=recuperarTexto("txtnombre");
     // recuperar el valor de la caja de texto txt apellido
     let apellido=recuperarTexto("txtapellido");
+
+
+    let edad = recuperarInt("txtedad");
+
+    let estatura = recuperarFloat("txtestatura");
     
 
 }
@@ -14,5 +19,19 @@ recuperarTexto=function(idComponente){
     valoringresado=componente.value;
     return valoringresado;
 
+
+}
+
+recuperarInt = function(idComponente){
+    let valorCaja = recuperarTexto(idComponente);
+    let valorEntero = parseInt(valorCaja);
+    return valorEntero;
+
+}
+
+recuperarFloat = function(idComponente){
+    let valorCaja = recuperarTexto(idComponente);
+    let valorFlotante = parseFloat(valorCaja);
+    return valorFlotante;
 
 }
