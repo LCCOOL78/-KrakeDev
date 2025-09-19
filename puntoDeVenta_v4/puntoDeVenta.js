@@ -6,6 +6,10 @@ calcularValorTotal = function () {
     let porcentajeDescuento = recuperarTexto("txtPorcentajeDescuento");
 
 
+
+    
+
+
     
     
 
@@ -17,7 +21,10 @@ calcularValorTotal = function () {
 
     //1. Recuperar el nombre del producto como String
     nombreProducto = document.getElementById("txtProducto");
-    nombreProducto.value;
+    let producto = nombreProducto.value;
+    console.log(nombreProducto);
+    
+
     //2. Recuperar el precio como float
     precioProducto = recuperarFloat("txtPrecio")
     //3. Recuperar cantidad como int
@@ -93,6 +100,9 @@ calcularValorTotal = function () {
        */
             
     //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
+    let resumen = "valor a pagar por"+ cantidad + " " + nombreProducto.value  +  "con el" + porcentajeDescuento + " % de descuento" + valorTotal;
+    mostrarTexto("lblResumen",resumen);
+    
     /*
         Ejemplo: 
             Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
@@ -101,6 +111,17 @@ calcularValorTotal = function () {
 
 }
 limpiar = function () {
+    
+mostrarTextoEnCaja("txtProducto","");
+mostrarTextoEnCaja("txtPrecio","");
+mostrarTextoEnCaja("txtCantidad","");
+mostrarTextoEnCaja("txtPorcentajeDescuento","");
+
+
+    
+
+
+    
     /*
         Dejar todas las cajas de texto con el valor cadena vacía, 0 ó 0.0 según el tipo de dato
         Dejar todos los textos de los montos con el valor 0.0
