@@ -111,11 +111,18 @@ calcularValorTotal = function () {
 
 }
 limpiar = function () {
-    
+
 mostrarTextoEnCaja("txtProducto","");
 mostrarTextoEnCaja("txtPrecio","");
 mostrarTextoEnCaja("txtCantidad","");
 mostrarTextoEnCaja("txtPorcentajeDescuento","");
+
+mostrarTextoEnCaja("lblSubtotal","");
+mostrarTextoEnCaja("lblDescuento","");
+mostrarTextoEnCaja("lblValorIVA","");
+mostrarTextoEnCaja("lblTotal","");
+mostrarTextoEnCaja("lblResumen","");
+
 
 
     
