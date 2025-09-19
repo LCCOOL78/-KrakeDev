@@ -7,6 +7,12 @@ calcularPromedioNotas = function(){
     let promedioformateado = promedio.toFixed(2);
 
     mostrarTexto("lblpromedio",promedioformateado);
+    if(promedioformateado>7){
+        mostrarImagen("imgExito","./imagenes/gif soy el exito.gif");
+
+    }else{
+        mostrarImagen("imgFra","./imagenes/gif soy un fra.gif");
+    }
 
     return promedioformateado;
 
